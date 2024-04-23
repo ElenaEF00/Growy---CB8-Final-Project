@@ -1,0 +1,134 @@
+@import "../../assets/variables.module.scss";
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  .modalContent {
+    width: 95%;
+    max-height: 95vh;
+    height: auto;
+    background-color: $primary-color;
+    border-radius: 40px;
+    border: 10px solid $bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+
+    .mainInfo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .modalTitle {
+        width: 250px;
+        margin-left: 10px;
+        color: white;
+        font-family: $titleFont;
+        font-weight: 900;
+      }
+
+      @media screen and (min-width: 430px) {
+        .modalTitle {
+          width: 100%;
+        }
+      }
+
+      .closeBtn {
+        border-radius: 100%;
+        border: 2px solid red;
+        background-color: white;
+        width: 1.8rem;
+        height: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .closeIcon {
+          font-size: 18px;
+          color: red;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .shop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 10px;
+      align-items: baseline;
+      margin: 10px;
+
+      .plant {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: auto;
+        height: 160px;
+        padding: 10px;
+        border: 3px solid white;
+        background-color: $primary-color;
+        border-radius: 16px;
+
+        .name {
+          margin: 0;
+          font-family: $titleFont;
+          font-weight: 400;
+        }
+
+        .plantInfo {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          gap: 0.5rem;
+          background-color: $primary-color;
+          border: none;
+        }
+
+        .resourcesWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.5rem;
+
+          .resource {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .plant img {
+        width: 50px;
+        height: auto;
+      }
+
+      .plant p {
+        margin-top: 5px;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .modalContent {
+    max-width: 40%;
+  }
+}

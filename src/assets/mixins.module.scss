@@ -1,0 +1,71 @@
+@import "./variables.module.scss";
+
+@mixin flex-container(
+  $direction: column,
+  $align: center,
+  $justify: center,
+  $gap: 1rem,
+  $wrap: wrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+@mixin wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 120px 10px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+@mixin reset($margin: 0 auto, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin main-btn {
+  font-size: 16px;
+  width: 250px;
+  background-color: $primary-color;
+  color: #fff;
+  border: 2px solid $primary-color;
+  border-radius: 26px;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  transition: all 0.6s linear;
+  cursor: pointer;
+}
+
+@mixin outline-btn {
+  font-size: 16px;
+  width: 250px;
+  background-color: #fff;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+  border-radius: 26px;
+  margin: 10px 0 20px;
+  padding: 10px;
+  transition: all 0.6s linear;
+  cursor: pointer;
+}
+@mixin form-input {
+  font-size: 16px;
+  width: 250px;
+  background-color: #fff;
+  color: $placeholder-color; 
+  border-radius: 20px;
+  outline-style: solid;
+  outline-color: $primary-color;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border: none;
+}
+ 

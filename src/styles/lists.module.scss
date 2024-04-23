@@ -1,0 +1,18 @@
+@import "../assets/variables.module.scss";
+@import "../assets/mixins.module.scss";
+
+.list_wrapper {
+  @include flex-container(column, center, center, 0.5rem, wrap);
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 120px 10px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: auto;
+  padding-right: 0;
+  padding-left: 0;
+  overflow-x: hidden;
+}

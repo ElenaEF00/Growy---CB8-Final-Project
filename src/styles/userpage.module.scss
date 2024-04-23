@@ -1,0 +1,51 @@
+@import "../assets/variables.module.scss";
+@import "../assets/mixins.module.scss";
+
+.userpage_wrapper {
+  @include flex-container(row);
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 120px 0;
+
+  .image {
+    border-radius: 60px;
+  }
+
+  .label {
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  input {
+    @include form-input;
+    font-family: $mainFont;
+  }
+
+  input::placeholder {
+    color: $placeholder-color;
+  }
+
+  .btn_save,
+  .btn_del {
+    @include main-btn;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+
+  .btn_edit {
+    @include outline-btn;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .image {
+    width: 250px;
+    height: 250px;
+  }
+}
